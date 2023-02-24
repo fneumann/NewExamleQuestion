@@ -1,18 +1,17 @@
 <?php
 
-class NewExampleQuestionFactory implements ilQuestionTypeFactory
+class ilNewExampleQuestionFactory implements ilQuestionFactory
 {
-    protected NewExampleQuestionPlugin $plugin;
+    protected ilNewExampleQuestionPlugin $plugin;
 
-
-    public function __construct(NewExampleQuestionPlugin $plugin)
+    public function __construct(ilNewExampleQuestionPlugin $plugin)
     {
         $this->plugin = $plugin;
     }
 
     public function getTypeTag() : string
     {
-        return 'nexmqst';
+        return 'NewExampleQuestion';
     }
 
     public function getTypeTranslation() : string
